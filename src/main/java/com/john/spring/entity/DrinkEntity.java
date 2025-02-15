@@ -26,12 +26,12 @@ public class DrinkEntity implements Serializable {
     @Column (nullable = false)
     private Float price;
 
-    @ManyToMany ( mappedBy = "drinks")
-    @Transient
+    @ManyToMany ( mappedBy = "drinks",fetch = FetchType.EAGER)
+    //@Transient
     private List<MenuEntity> menus;
 
-    @ManyToMany ( mappedBy = "drinks")
-    @Transient
+    @ManyToMany ( mappedBy = "drinks",fetch = FetchType.EAGER)
+    //@Transient
     private List<CategoryEntity> categories;
 
     public List<CategoryEntity> getCategories() {

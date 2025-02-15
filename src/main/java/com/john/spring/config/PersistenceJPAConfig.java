@@ -56,6 +56,7 @@ public class PersistenceJPAConfig {
         return properties;
     }
 
+
     @Bean
     public HikariDataSource getHikariDataSource() {
         HikariDataSource returnValue = new HikariDataSource();

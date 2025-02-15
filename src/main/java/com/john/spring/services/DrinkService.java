@@ -6,9 +6,19 @@ import java.util.List;
 
 public interface DrinkService {
 
-    DrinkDto addDrink(DrinkDto drink);
-    DrinkDto getDrinkById(Integer drinkId);
-    DrinkDto updateDrinkDto(DrinkDto drink, Integer drinkId);
-    void deleteDrink(Integer drinkId);
-    List<DrinkDto> listAllDrinks();
+	DrinkDto addDrink(DrinkDto drink);
+
+	DrinkDto getDrinkById(Integer drinkId);
+
+	DrinkDto updateDrink(DrinkDto drink, Integer drinkId);
+
+	void deleteDrink(Integer drinkId);
+
+	List<DrinkDto> listAllDrinks();
+
+	void addCategory(Integer drinkId, Integer categoryId);
+
+	void addMenu(Integer drinkId, Integer menuId);
+
+	List<DrinkDto> listAllByCategoryId(Integer categoryId);
 }
